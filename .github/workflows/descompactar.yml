@@ -1,0 +1,38 @@
+name: Descompactar projeto
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Descompactar ZIP
+        run: |
+          mkdir -p projeto_descompactado
+          unzip -o reconhecimento-facial-android-4.zip -d projeto_descompactado
+
+      - name: Mostrar estrutura
+        run: |
+          find projeto_descompactado -maxdepth 4 -type f | sort
+
+      - name: Salvar arquivos no GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add projeto_descompactado
+
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração para salvar."
+          else
+            git commit -m "Descompactar projeto Android"
+            git push
+          fi
