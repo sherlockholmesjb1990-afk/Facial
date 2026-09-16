@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- rosto (círculo + corpo simples) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,42 m-14,0 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,78 C30,64 40,58 54,58 C68,58 78,64 78,78 L78,80 L30,80 Z" />
+
+    <!-- mira de câmera nos quatro cantos -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M24,34 L24,26 L32,26" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M84,34 L84,26 L76,26" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M24,90 L24,98 L32,98" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M84,90 L84,98 L76,98" />
+</vector>
